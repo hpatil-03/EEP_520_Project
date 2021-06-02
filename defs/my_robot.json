@@ -1,0 +1,36 @@
+{
+    "name": "MyRobot",
+    "type": "dynamic",
+    "description": "Replace this string with a description",
+    "shape": [
+        { "x": -10, "y": 10 },
+        { "x": 10, "y": 10 },
+        { "x": 10, "y": -10 },
+        { "x": -10, "y": -10 }
+    ],
+    "friction": {
+      "collision": 5,
+      "linear": 40,
+      "rotational": 600
+    },
+  "sensors": [
+    {
+      "type": "range",
+      "location": {
+        "x": 16,
+        "y": 0
+      },
+      "direction": 0
+    },
+    {
+      "type": "range",
+      "location": {
+        "x": 16,
+        "y": 0
+      },
+      "direction": 90
+    }
+  ],
+    "mass": 1,    
+    "controller": "lib/my_robot.so"
+}
