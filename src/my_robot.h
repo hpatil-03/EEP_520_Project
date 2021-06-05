@@ -13,10 +13,10 @@ namespace {
     public:
         void entry(const Event& e) {}
         void during() {
-            track_velocity(10, 0);
+            track_velocity(20, 0);
             std::cout << "sensor" << sensor_value(0) << std::endl;
-            if (sensor_value(0) < 30) {
-                std::cout << "movingforward->rorate state change"<<"angle" <<angle()<< std::endl;
+            if (sensor_value(0) < 25) {
+                std::cout << "movingforward->rotate state change"<<"angle" <<angle()<< std::endl;
                 emit(Event("tick"));
             }
         }
@@ -40,15 +40,16 @@ namespace {
                 }
             }
             if ((direction == 0)&&(angle()<= total_angle)){
-                track_velocity(0, 1.5708);
+                track_velocity(0, 0.5236);
                 
             }
-            else if ((direction == 1) && (angle() <= total_angle)) {
-                track_velocity(0, -1.5708);
+            else if ((direction == 1) && (angle() >= total_angle)) {
+                track_velocity(0, -0.5236);
                 
             }
             std::cout << "angle"<<this->angle()<<"total_angle"<< total_angle << std::endl;
-            if (angle() >= total_angle) {
+            if ((direction==0&&angle() >= total_angle)|| (direction == 1 && angle() <= total_angle)) {
+        
                 std::cout << "rotate->movingforward state change" << std::endl;
                 lock = 0;
                 emit(Event("tick"));
@@ -57,7 +58,7 @@ namespace {
         }
         void exit(const Event& e) {}
     private:
-        float total_angle = 0;
+        double total_angle = 0;
         int lock = 0,direction=0;
     };
     
