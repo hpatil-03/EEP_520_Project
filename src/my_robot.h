@@ -54,7 +54,7 @@ namespace {
 					total_angle += 1.5708;
 
 				}
-				else if (sensor_value(2) > sensor_value(1)) {
+				else if (sensor_value(2) >= sensor_value(1)) {
 					direction = 1;
 					total_angle -= 1.5708;
 				}
