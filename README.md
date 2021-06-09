@@ -14,7 +14,7 @@ To resolve this issue the total_angle global variable is checked to get the prec
 ### Top and Bottom sensors algorithm limitations 
 * The rotation algorithm depends on the top and bottom algorithm. The rotation angle is decided on the greater sensor values depicting max free space. Not necessary that the max free space might be the correct track. So the algorithm is changed so that the agent should not go back travel through the same track again. 
 
-## Installation and execution
+## Installation and Execution
 ---
 	git clone https://github.com/hpatil-03/EEP_520_Project.git
 	cd EEP_520_Project
@@ -22,8 +22,8 @@ To resolve this issue the total_angle global variable is checked to get the prec
 	make
 	esm start
 	enviro
----
 [open localhost on any web browser](http://localhost/)
+---
 
 ## How to use/modify the project
 * The config.json can be editted or changed to some different file config having different agent attributes and maze orientation.
