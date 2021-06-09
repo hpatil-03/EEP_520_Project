@@ -22,7 +22,7 @@ To resolve this issue the total_angle global variable is checked to get the prec
 	make
 	esm start
 	enviro
-[open localhost on any web browser](http://localhost/)
+	[open localhost on any web browser](http://localhost/)
 ---
 
 ## How to use/modify the project
