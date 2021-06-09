@@ -31,6 +31,6 @@ To resolve this issue the total_angle global variable is checked to get the prec
 * If the changes are made to the json file then directly enter command 'enviro' to run the program.
 * If the changes are made to the .h file then command 'make' and then 'enviro' needs to be entered.
 
-##Acknowlegment
+## Acknowlegment
 * Klavin-> Enviro Library 
 * WebSocket library
