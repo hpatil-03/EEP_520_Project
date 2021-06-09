@@ -1,7 +1,7 @@
 {
-    "name": "MyRobot",
-    "type": "dynamic",
-    "description": "Replace this string with a description",
+  "name": "MyRobot",
+  "type": "dynamic",
+  "description": "Agent having a rectangular shape that traverses through a maze using three sensors.",
   "shape": [
     {
       "x": -5,
@@ -20,11 +20,11 @@
       "y": -5
     }
   ],
-    "friction": {
-      "collision": 5,
-      "linear": 40,
-      "rotational": 600
-    },
+  "friction": {
+    "collision": 5,
+    "linear": 40,
+    "rotational": 600
+  },
   "sensors": [
     {
       "type": "range",
@@ -51,6 +51,6 @@
       "direction": -1.57
     }
   ],
-    "mass": 1,    
-    "controller": "lib/my_robot.so"
+  "mass": 1,
+  "controller": "lib/my_robot.so"
 }
