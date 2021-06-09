@@ -19,8 +19,6 @@ To resolve this issue the total_angle global variable is checked to get the prec
 	git clone https://github.com/hpatil-03/EEP_520_Project.git
 	cd EEP_520_Project
 	docker run -p80:80 -p8765:8765 -v $PWD:/source -it klavins/enviro:alpha bash
-	make
-	esm start
 	enviro
 [open localhost on any web browser](http://localhost/)
 ---
@@ -30,6 +28,7 @@ To resolve this issue the total_angle global variable is checked to get the prec
 * The defs/my_robot.json file can be editted to change the shape, description of the agent. Number of sensors can be also be editted here. 
 * If the changes are made to the json file then directly enter command 'enviro' to run the program.
 * If the changes are made to the .h file then command 'make' and then 'enviro' needs to be entered.
+![maze](https://user-images.githubusercontent.com/82071575/121275440-899c7280-c881-11eb-9f88-85e9b10b1c20.jpg)
 
 ## Acknowlegment
 * Klavin-> Enviro Library 
