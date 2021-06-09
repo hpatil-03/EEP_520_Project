@@ -1,6 +1,6 @@
 # Complex Maze Solving Autonomous Robot
 ## Overview
-To put a robot at the start and have it explore until it finds the end of the maze using range sensors, wall following behaviors
+To put a robot at the start location and have it explore until it finds the end of the maze using range sensors, wall following behaviors
 
 ## Key Challenges and Solutions
 
