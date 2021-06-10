@@ -3,7 +3,7 @@ ARCH := $(shell uname -m)
 
 #Compilers
 CC          := g++ -std=c++17 -Wno-psabi
-
+DGEN        := doxygen
 #The Target Library
 
 #The Directories, Source, Includes, Objects, Binary and Resources
@@ -18,7 +18,7 @@ CFLAGS      := -ggdb  -shared -fPIC
 INCLUDE		:= -I $(ENVIRODIR) -I $(CHIPDIR)/include/chipmunk 
 
 #Files
-
+DGENCONFIG  := docs.config
 TARGETDIR	 := ../lib
 SOURCES      := $(wildcard *.cc)
 HEADERS      := $(wildcard *.h)
@@ -36,3 +36,8 @@ clean:
 $(TARGETDIR)/%.so: %.cc %.h
 	$(CC) $(CFLAGS) $(INCLUDE) $< -o $@
 
+docs: docs/index.html
+
+docs/index.html: $(SOURCES) $(HEADERS) README.md docs.config dox/* examples/*.cc
+	$(DGEN) $(DGENCONFIG)
+	cp .nojekyll docs

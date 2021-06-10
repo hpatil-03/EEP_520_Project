@@ -90,7 +90,7 @@ namespace {
 
 	//! Class RobotController inheritates from StateMachine and AgentInterface class
 	//! The class RobotController is set initial state to moveforward and to add_transition function 
-	//! triggered via events
+	//! triggered via events 
 	class RobotController : public StateMachine, public AgentInterface {
 
 	public:
