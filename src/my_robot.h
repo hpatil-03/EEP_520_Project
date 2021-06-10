@@ -24,9 +24,9 @@ namespace {
 		//! moves agent with constant velocity until sensor value reaches threshold
 		//! triggers event to change state to rotating  
 		void during() {
-			track_velocity(25, 0);
+			track_velocity(20, 0);
 			std::cout << "sensor" << sensor_value(0) << std::endl;
-			if (sensor_value(0) < 25) {
+			if (sensor_value(0) < 23) {
 				std::cout << "movingforward->rotate state change" << "angle" << angle() << std::endl;
 				emit(Event("tick"));
 			}
@@ -34,7 +34,7 @@ namespace {
 		//! exit MovingForward state
 		//! \param e Event
 		void exit(const Event& e) {}
-	};
+	}; 
 
 	//! Class Rotating inheritates from State and AgentInterface class
 	//! The State MovingForward is used when the agent is going forward 
